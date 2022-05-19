@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <AppHeader/>
-    <AppMainAlbum/>
+    <div class="container p-5">
+      <AppMainAlbum/>
+    </div>
+    
   </div>
 </template>
 
@@ -13,7 +16,7 @@ export default {
   name: 'App',
   components: {
     AppHeader,
-    AppMainAlbum,
+    AppMainAlbum
 }
 }
 </script>

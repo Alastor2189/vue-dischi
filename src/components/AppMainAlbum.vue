@@ -1,27 +1,36 @@
 <template>
   <div class="container">
     <div class="row row-cols-5">
-        <div class="card">
-          <AppCd/>
-        </div>
+          <AppCd v-for="(item, index) in coverCd" :key="index" :album="item"/>
     </div>    
   </div>
 </template>
 
 <script>
+
 import AppCd from "./AppCd.vue";
+import axios from "axios"
 export default {
   name: "AppMainAlbum",
   components: {
     AppCd,
+  },
+  data: function(){
+    return {
+      coverCd:[],
+    };
+  },
+  created() {
+    axios.get("https://flynn.boolean.careers/exercises/api/array/music").then((resp) => {
+      this.coverCd = resp.data.response;
+
+    });
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
 
-.card{
-  width: calc(100% / 5 - 1em);
-}
+
 
 </style>

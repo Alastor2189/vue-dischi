@@ -19,7 +19,7 @@ export default {
         display: flex;
         align-items: center;   
     }
-    img {
+    header img {
         height: 40px;
         }
 </style>

@@ -1,19 +1,19 @@
 <template>
   <div id="app">
     <AppHeader/>
-    <AppMain/>
+    <AppMainAlbum/>
   </div>
 </template>
 
 <script>
 import AppHeader from './components/AppHeader.vue';
-import AppMain from './components/AppMain.vue';
+import AppMainAlbum from './components/AppMainAlbum.vue';
 
 export default {
   name: 'App',
   components: {
     AppHeader,
-    AppMain
+    AppMainAlbum,
 }
 }
 </script>

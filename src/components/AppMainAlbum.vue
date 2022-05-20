@@ -7,13 +7,14 @@
 </template>
 
 <script>
-
+import AppResearch from "./AppResearch.vue";
 import AppCd from "./AppCd.vue";
 import axios from "axios"
 export default {
   name: "AppMainAlbum",
   components: {
     AppCd,
+    AppResearch,
   },
   data: function(){
     return {

@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-      <select name="" id="" v-model="research" @change="$emit('searchClic','research')">
+      <select name="" id="" v-model="research" @change="$emit('searchClic', research)">
             <option value="">All</option>
             <option value="rock">Rock</option>
             <option value="pop">Pop</option>
@@ -21,7 +21,10 @@ export default {
         
         },
         methods: {
-            
+            resetSearch: function() {
+                this.research = "";
+                this.$emit("resetClicked")
+            }
         },
     
 };
